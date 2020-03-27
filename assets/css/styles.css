@@ -37,7 +37,7 @@ body {
 .pink {
     height: .2vw;
     background-color: var(--pink);
-    box-shadow: 2px 2px 5px var(--pink);
+    box-shadow: 2px 2px 8px var(--pink);
     left: -5%;
     top: 50%;
     transform: translate(-50%, 50%) rotate(-55deg);
@@ -46,17 +46,17 @@ body {
 .orange {
     height: .4vw;
     background-color: var(--orange);
-    box-shadow: 2px 2px 5px var(--orange);
-    top: 65%;
+    box-shadow: 2px 2px 8px var(--orange);
+    top: 70%;
     transform: translate(-50%, 50%);
     animation-delay: 1s;
-    animation-name: orange;
+    animation-name: line-animate;
 }
 
 .cyan {
     height: .4vw;
     background-color: var(--cyan);
-    box-shadow: 2px 2px 5px var(--cyan);
+    box-shadow: 2px 2px 8px var(--cyan);
     left: 100%;
     top: 0;
     transform: translate(-50%, 50%) rotate(135deg);
@@ -64,15 +64,6 @@ body {
 }
 
 @keyframes line-animate {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 115%;
-    }
-}
-
-@keyframes orange {
     0% {
         width: 0%;
     }
@@ -131,8 +122,84 @@ nav ul li a {
 /*Main Body*/
 
 main {
-    min-height: 75vw;
+    padding: 7vw 0;
 }
+
+video {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    width: 100%;
+    padding: 3vw 0;
+}
+.text {
+    background: var(--background);
+}
+
+section {
+    margin: 0 auto;
+    width: 87.5%;
+    padding: 1vw;
+}
+
+section .home-post {
+    display: flex;
+    color: #fff;
+}
+
+section article div {
+    width: 50%;
+    padding: 2.5vw;
+}
+
+section:nth-child(2n+1) .home-post {
+    flex-direction: row;
+}
+
+section:nth-child(2n) .home-post {
+    flex-direction: row-reverse;
+}
+
+.img {
+    background: url(../media/82796600_2813666125343321_6088889858963537920_o.jpg);
+    min-height: 25vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: var(--orange);
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px var(--orange);
+    font-size: 2.5vw;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+.home-post p {
+    font-size: 1vw;
+    padding: 3vw 0;
+    line-height: 1.8vw;
+}
+
+
+section:nth-child(3n+2) h2 {
+    color: var(--pink);
+    text-shadow: 1px 1px 5px var(--pink);
+}
+
+section:nth-child(3n+1) h2 {
+    color: var(--cyan);
+    text-shadow: 1px 1px 5px var(--cyan);
+}
+
+section:nth-child(3n) h2 {
+    color: var(--orange);
+    text-shadow: 1px 1px 5px var(--orange);
+} 
 
 /*Footer*/
 
