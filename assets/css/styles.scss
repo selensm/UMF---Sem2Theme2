@@ -119,95 +119,96 @@ nav ul li a {
     border-bottom: solid 2px var(--orange);
 }
 
-/*Home Page Main*/
+/*Main Home Page*/
 
-.home {
-    padding-top: 8.7vw;
+.home-page {
+
+    main {
+        padding-top: 8.7vw;
+    }
+    
+    video {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        width: 100%;
+    }
+    
+    .text {
+        background: var(--background);
+        padding: 0 3.7vw;
+    }
+    
+    section {
+        margin: 0 auto;
+        width: 87.5%;
+        padding-bottom: 3.7vw;
+    
+    &.home-post 
+        display: flex;
+        color: #fff;
+    }
+    
+    section article div {
+        width: 50%;
+        padding-bottom: 3.7vw;
+    }
+    
+    section:nth-child(2n+1) .home-post {
+        flex-direction: row;
+    }
+    
+    section:nth-child(2n) .home-post {
+        flex-direction: row-reverse;
+    }
+    
+    .img {
+        background: url(../media/82212136_2813945325315401_7417363307071275008_o.jpg);
+        min-height: 25vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    h1 {
+        color: var(--orange);
+        text-align: center;
+        font-weight: 900;
+        text-shadow: 1px 1px 5px var(--orange);
+        font-size: 2.3vw;
+        padding-bottom: 3.7vw;
+    }
+    
+    h2 {
+        font-size: 2.5vw;
+        padding-bottom: 3.7vw;
+        font-weight: 900;
+    }
+    
+    .home-post p {
+        font-size: 1vw;
+        line-height: 1.8vw;
+        padding-bottom: 3.7vw;
+    }
+    
+    
+    section:nth-child(3n+2) h2 {
+        color: var(--pink);
+        text-shadow: 1px 1px 5px var(--pink);
+    }
+    
+    section:nth-child(3n+1) h2 {
+        color: var(--cyan);
+        text-shadow: 1px 1px 5px var(--cyan);
+    }
+    
+    section:nth-child(3n) h2 {
+        color: var(--orange);
+        text-shadow: 1px 1px 5px var(--orange);
+    } 
+
 }
 
-.home video {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    width: 100%;
-}
 
-.home .home-post .text {
-    background: var(--background);
-    padding: 0 3.7vw;
-}
-
-.home section {
-    margin: 0 auto;
-    width: 87.5%;
-    padding-bottom: 3.7vw;
-}
-
-.home section .home-post {
-    display: flex;
-    color: #fff;
-}
-
-.home section .home-post div {
-    width: 50%;
-    padding-bottom: 3.7vw;
-}
-
-.home section:nth-child(2n+1) .home-post {
-    flex-direction: row;
-}
-
-.home section:nth-child(2n) .home-post {
-    flex-direction: row-reverse;
-}
-
-.home .home-post .img {
-    background: url(../media/82212136_2813945325315401_7417363307071275008_o.jpg);
-    min-height: 25vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.home h1 {
-    color: var(--orange);
-    text-align: center;
-    font-weight: 900;
-    text-shadow: 1px 1px 5px var(--orange);
-    font-size: 2.3vw;
-    padding-bottom: 3.7vw;
-}
-
-.home h2 {
-    font-size: 2.5vw;
-    padding-bottom: 3.7vw;
-    font-weight: 900;
-}
-
-.home-post p {
-    font-size: 1vw;
-    line-height: 1.8vw;
-    padding-bottom: 3.7vw;
-}
-
-
-.home section:nth-child(3n+2) h2 {
-    color: var(--pink);
-    text-shadow: 1px 1px 5px var(--pink);
-}
-
-.home section:nth-child(3n+1) h2 {
-    color: var(--cyan);
-    text-shadow: 1px 1px 5px var(--cyan);
-}
-
-.home section:nth-child(3n) h2 {
-    color: var(--orange);
-    text-shadow: 1px 1px 5px var(--orange);
-} 
-
-/*Artists Page Main*/
-
-.artists
 
 /*Footer*/
 
@@ -245,18 +246,3 @@ footer a span {
     justify-self: flex-end;
 }
 
-/* li:nth-child(3n+1) {
-    color: var(--orange);
-}
-
- 
-
-li:nth-child(3n+2) {
-    color: var(--cyan);
-}
-
- 
-
-li:nth-child(3n) {
-    color: var(--purple);
-} */
