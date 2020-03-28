@@ -19,6 +19,10 @@ body {
     font-family: 'Spartan', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 /*Background*/
 
 .bckg {
@@ -109,7 +113,6 @@ nav ul {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #fff;
     padding: 1.5vw;
     font-size: 1.1vw;
@@ -119,11 +122,70 @@ nav ul li a {
     border-bottom: solid 2px var(--orange);
 }
 
-/*Home Page Main*/
+h1 {
+    color: var(--orange);
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px var(--orange);
+    font-size: 2.3vw;
+    padding-bottom: 3.7vw;
+}
 
-.home {
+h2 {
+    font-size: 2.5vw;
+    padding-bottom: 3.7vw;
+    font-weight: 900;
+}
+
+section:nth-child(3n+2) h2 {
+    color: var(--pink);
+    text-shadow: 1px 1px 5px var(--pink);
+}
+
+section:nth-child(3n+1) h2 {
+    color: var(--cyan);
+    text-shadow: 1px 1px 5px var(--cyan);
+}
+
+section:nth-child(3n) h2 {
+    color: var(--orange);
+    text-shadow: 1px 1px 5px var(--orange);
+} 
+
+
+h3 {
+    font-size: 1.5vw;
+    text-align: center;
+    padding-top: 3.7vw;
+    font-weight: 900;
+}
+
+a:nth-child(3n+2) h3 {
+    color: var(--pink);
+    text-shadow: 1px 1px 5px var(--pink);
+}
+
+a:nth-child(3n) h3 {
+    color: var(--cyan);
+    text-shadow: 1px 1px 5px var(--cyan);
+}
+
+a:nth-child(3n+1) h3 {
+    color: var(--orange);
+    text-shadow: 1px 1px 5px var(--orange);
+} 
+
+p {
+    font-size: 1vw;
+    line-height: 1.8vw;
+    padding-bottom: 3.7vw;
+}
+
+main {
     padding-top: 8.7vw;
 }
+
+/*Home Page Main*/
 
 .home video {
     grid-column-start: 2;
@@ -168,60 +230,152 @@ nav ul li a {
     background-size: cover;
 }
 
-.home h1 {
-    color: var(--orange);
-    text-align: center;
-    font-weight: 900;
-    text-shadow: 1px 1px 5px var(--orange);
-    font-size: 2.3vw;
-    padding-bottom: 3.7vw;
-}
-
-.home h2 {
-    font-size: 2.5vw;
-    padding-bottom: 3.7vw;
-    font-weight: 900;
-}
-
-.home-post p {
-    font-size: 1vw;
-    line-height: 1.8vw;
-    padding-bottom: 3.7vw;
-}
-
-
-.home section:nth-child(3n+2) h2 {
-    color: var(--pink);
-    text-shadow: 1px 1px 5px var(--pink);
-}
-
-.home section:nth-child(3n+1) h2 {
-    color: var(--cyan);
-    text-shadow: 1px 1px 5px var(--cyan);
-}
-
-.home section:nth-child(3n) h2 {
-    color: var(--orange);
-    text-shadow: 1px 1px 5px var(--orange);
-} 
-
 /*Artists Page Main*/
 
-.artists
+.artists {
+    min-height: 70vh;
+}
 
+/*Filters*/
+
+form {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    height: 4.6vw;
+    background-color: var(--gray);
+    border-radius: .5vw;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 1vw;
+}
+
+form select {
+    /* display: none; */
+    background-color: transparent;
+    font-family: 'Spartan', sans-serif;
+    color: #fff;
+    border: none;
+    font-size: 1.3vw;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select::before, select::after {
+    content: '';
+    position: absolute;
+    transform: rotate(135deg);
+}
+
+select::before {
+    width: 10vw;
+    height: 5vw;
+    top: 3vw;
+    left: -10vw;
+    background: var(--cyan);
+    box-shadow: var(--cyan) 1px 1px 5px;
+}
+
+select::after {
+    width: 7vw;
+    height: 3vw;
+    top: 1.5vw;
+    left: -15vw;
+    background: var(--cyan);
+    box-shadow: var(--cyan) 1px 1px 5px;
+}
+
+.fas.fa-angle-down {
+    font-size: 1.6vw;
+    color: var(--cyan);
+    text-shadow: var(--cyan) 1px 1px 5px;
+    position: relative;
+    top: .5vw;
+    margin-right: 3vw;
+}
+
+form select option {
+    background-color: var(--gray);
+    color: #fff;
+    font-size: 1.3vw;
+    padding: 2vw;
+}
+
+input {
+    background: var(--gray);
+    border: solid 1px var(--orange);
+    border-radius: .5vw;
+    box-shadow: var(--orange) 1px 1px 5px;
+    width: 30vw;
+    height: 6vh;
+    padding: 1vw;
+    transform: translateX(100%);
+    color: #fff;
+}
+
+/*Artist Cards*/
+
+.grid-artists {
+    display: grid;
+    grid-template-columns: 6.25% 27.5% 2.5% 27.5% 2.5% 27.5% 6.25%;
+    grid-template-rows: auto;
+}
+
+.artists section a article {
+    background-color: var(--gray);
+    border-radius: .5vw;
+    width: 27.2vw;
+    margin-top: 3.7vw;
+}
+
+.artists section a article div {
+    padding: 3.7vw 0;
+}
+
+section a:nth-child(3n+1){
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+section a:nth-child(3n+2){
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+section a:nth-child(3n+3){
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+.artist-image {
+    background: url(../media/82422573_2814232321953368_2740660576228212736_o.jpg);
+    width: 12vw;
+    height: 12vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: solid 3px var(--cyan);
+    margin: 0 auto;
+}
 /*Footer*/
 
 footer {
     background-color: var(--background);
     border-top: solid 3px var(--orange);
     padding: 3.7vw 0;
+    margin-top: 3.7vw;
 }
 
 footer a {
     text-decoration: none;
     color: #fff;
     padding: .7vw 0;
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 
 footer a span {
