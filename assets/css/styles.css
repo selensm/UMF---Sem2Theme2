@@ -29,7 +29,7 @@ a {
 
 /*Background*/
 
-/* .bckg {
+.bckg {
     position: fixed;
     z-index: -1;
 }
@@ -78,7 +78,13 @@ a {
     100% {
         width: 200%;
     }
-} */
+}
+
+.home-post, .info>section {
+    background: var(--background);
+}
+
+/*General*/
 
 h1 {
     color: var(--orange);
@@ -252,6 +258,11 @@ nav ul li a {
     color: #fff;
     padding: 1.5vw;
     font-size: 1.1vw;
+    margin: 0 .7vw;
+}
+
+nav ul li a:hover {
+    border-bottom: solid 2px var(--orange);
 }
 
 .active {
@@ -403,6 +414,21 @@ hr {
     left: 25%;
 }
 
+.line-up section article:nth-child(3n+1) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.line-up section article:nth-child(3n+2) {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.line-up section article:nth-child(3n+3) {
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
 /*Artists Page Main*/
 
 .artists section article, .individual section article #individual {
@@ -417,22 +443,22 @@ hr {
     padding: 3.7vw 0;
 }
 
-section article:nth-child(4n+1) {
+.artists section article:nth-child(4n+1) {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-section article:nth-child(4n+2) {
+.artists section article:nth-child(4n+2) {
     grid-column-start: 4;
     grid-column-end: 5;
 }
 
-section article:nth-child(4n+3) {
+.artists section article:nth-child(4n+3) {
     grid-column-start: 6;
     grid-column-end: 7;
 }
 
-section article:nth-child(4n+4) {
+.artists section article:nth-child(4n+4) {
     grid-column-start: 8;
     grid-column-end: 9;
 }
@@ -683,8 +709,8 @@ a:visited {
 }
 
 #individual-details span::before {
-    width: 37px;
-    height: 3px;
+    width: 22px;
+    height: 2px;
     top: 5px;
     left: -40px;
     background:var(--cyan);
@@ -693,10 +719,10 @@ a:visited {
 }
 
 #individual-details span::after {
-    width: 22px;
-    height: 3px;
+    width: 12px;
+    height: 2px;
     top: 4px;
-    left: -20px;
+    left: -25px;
     background: #80FDDA;
     box-shadow: 1px 1px 3px #80FFDA;
     border-radius: 3.7vw;
@@ -711,6 +737,7 @@ a:visited {
 
 .info section {
     margin: 3.7vw 0;
+    padding: 1.7vw;
 }
 
 .info h5 {
