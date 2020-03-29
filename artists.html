@@ -9,7 +9,7 @@
     <link href="assets/css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0f43a8f1c0.js" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Spartan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spartan:400,500,600,700,800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -141,8 +141,9 @@
     </header>
 
     <main class="artists">
+        
         <h1>PERFORMANTS</h1>
-        <div class="grid-container">
+        <section class="grid-container">
             <form class="filters">
                 <select id="genres" name="genres">
                     <option value="0" disabled selected>Genre</option>
@@ -151,7 +152,7 @@
                     <option value="hip-hop">Hip-hop</option>
                     <option value="indie">Indie</option>
                 </select>
-                <i class="fas fa-angle-down" class="filter-select"></i>
+                <i class="fas fa-angle-down" for="club" class="filter-select"></i>
                 <select id="club" name="club">
                     <option value="0" disabled selected>Youth club</option>
                     <option value="youth club aarhus">From Aarhus</option>
@@ -159,53 +160,60 @@
                     <option value="youth club Aalborg">From Aalborg</option>
                 </select>
                 <i class="fas fa-angle-down" for="club" class="filter-select"></i>
-                <input type="search" placeholder="Search by name...">
+                <input type="search" id="search" placeholder="Search by name...">
             </form>
-        </div>
-        <section class="grid-artists" id="artist">
-            <a href="">
-                <article>
-                    <div>
-                        <div class="artist-image"></div>
-                        <h3>FAUSTINO BLACKBEARD</h3>
-                    </div>
-                </article>
-            </a>
-            <a href="">
-                <article>
-                    <div>
-                        <div class="artist-image"></div>
-                        <h3>FAUSTINO BLACKBEARD</h3>
-                    </div>
-                </article>
-            </a>
-            <a href="">
-                <article>
-                    <div>
-                        <div class="artist-image"></div>
-                        <h3>FAUSTINO BLACKBEARD</h3>
-                    </div>
-                </article>
-            </a>
-            <a href="">
-                <article>
-                    <div>
-                        <div class="artist-image"></div>
-                        <h3>FAUSTINO BLACKBEARD</h3>
-                    </div>
-                </article>
-            </a>
-            <a href="">
-                <article>
-                    <div>
-                        <div class="artist-image"></div>
-                        <h3>FAUSTINO BLACKBEARD</h3>
-                    </div>
-                </article>
-            </a>
         </section>
 
-
+        <section class="grid-artists-large" id="artist">
+            <article>
+                <div>
+                    <div class="gradient">
+                       <div class="artist-image"></div> 
+                    </div>
+                    <h3>FAUSTINO BLACKBEARD</h3>
+                </div>
+            </article>
+                <article>
+                    <div>
+                        <div class="gradient">
+                           <div class="artist-image"></div> 
+                        </div>
+                        <h3>FAUSTINO BLACKBEARD</h3>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <div class="gradient">
+                           <div class="artist-image"></div> 
+                        </div>
+                        <h3>FAUSTINO BLACKBEARD</h3>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <div class="gradient">
+                           <div class="artist-image"></div> 
+                        </div>
+                        <h3>FAUSTINO BLACKBEARD</h3>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <div class="gradient">
+                           <div class="artist-image"></div> 
+                        </div>
+                        <h3>FAUSTINO BLACKBEARD</h3>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <div class="gradient">
+                           <div class="artist-image"></div> 
+                        </div>
+                        <h3>FAUSTINO BLACKBEARD</h3>
+                    </div>
+                </article>
+        </section>
 
     </main>
 
