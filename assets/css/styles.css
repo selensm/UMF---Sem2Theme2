@@ -555,6 +555,10 @@ a:visited {
     text-shadow: 1px 1px 3px var(--cyan);
 }
 
+.individual section article #individual, #performance {
+    min-width: 25vw;
+}
+
 #individual-performance {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -569,7 +573,7 @@ a:visited {
     border-radius: .5vw;
     width: 20vw;
     margin-top: 3.7vw;
-    padding: 1.7vw;
+    padding: 1.7vw 3.7vw;
     height: fit-content;
 }
 
