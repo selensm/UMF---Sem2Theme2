@@ -177,6 +177,7 @@ span {
 
 main {
     padding-top: 8.7vw;
+    min-height: 95vh;
 }
 
 article:nth-child(4n+2) hr {
@@ -699,7 +700,7 @@ a:visited {
 #individual-details p {
     font-size: 1.2vw;
     padding: .7vw 0;
-}
+}  
 
 #individual-details span::before, #individual-details span::after {
     content: '';
@@ -767,12 +768,24 @@ a:visited {
     padding-top: 3.7vw;
 }
 
+.stages-info>h6, .stages-info>br {
+    display: none;
+}
+
 #open p {
+    display: block;
+}
+
+#open .stages-info>h6, #open .stages-info>br {
     display: block;
 }
 
 #open .fas.fa-angle-down {
     transform: rotate(180deg);
+}
+
+.stages-info>p {
+    padding: 1.7vw 0;
 }
 
 /*Footer*/
@@ -812,3 +825,10 @@ footer a span {
     align-self: center;
     justify-self: flex-end;
 }
+
+/*Smaller desktops and big laptops*/
+/*Laptops*/
+/*Smaller laptops and big tablets*/
+/*Tablets*/
+/*Phablets and bigger mobile screens*/
+/*Small mobile screens*/
