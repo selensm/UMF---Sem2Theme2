@@ -161,6 +161,14 @@ p {
     color: #fff;
 }
 
+span {
+    color: #c3c3c3;
+    font-size: 1.2vw;
+    margin-bottom: 3.7vw;
+    position: relative;
+    left: 5%;
+}
+
 main {
     padding-top: 8.7vw;
 }
@@ -397,7 +405,7 @@ hr {
 
 /*Artists Page Main*/
 
-.artists section article {
+.artists section article, .individual section article #individual {
     background-color: var(--gray);
     border-radius: .5vw;
     width: 20vw;
@@ -405,7 +413,7 @@ hr {
     height: fit-content;
 }
 
-.artists section article div {
+.artists section article div, .individual section article #individual {
     padding: 3.7vw 0;
 }
 
@@ -512,6 +520,182 @@ input#search {
 
 select:focus, input:focus {
     outline: none;
+}
+
+/*Individual Artist Page*/
+
+.breadcrumbs {
+    color: #fff;
+    font-size: 1.2vw;
+    display: flex;
+    margin: 0 auto;
+    width: 87%;
+    height: 4.6vw;
+    padding: 1.7vw;
+    background-color: var(--gray);
+    border-radius: .5vw;
+    
+}
+
+.breadcrumbs a, .breadcumbs p {
+    padding: 0 .7vw;
+}
+
+.breadcrumbs div {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+a:visited {
+    color: #fff;
+}
+
+.individual h3 {
+    color: var(--cyan);
+    text-shadow: 1px 1px 3px var(--cyan);
+}
+
+#individual-performance {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#individual .artist-image {
+    transform: translateY(.3vw);
+}
+
+#performance {
+    background-color: var(--gray);
+    border-radius: .5vw;
+    width: 20vw;
+    margin-top: 3.7vw;
+    padding: 1.7vw;
+    height: fit-content;
+}
+
+.flex, .flex>div {
+    display: flex;
+    flex-direction: row;
+}
+
+#performance div p {
+    font-size: 1.4vw;
+    margin: 0 auto;
+    position: relative;
+    padding: .7vw 0;
+    z-index: 1;
+}
+
+#performance>p {
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+#performance>.flex>div>p:nth-child(1) {
+    font-size: 2.4vw;
+}
+
+.flex div p:nth-child(2){
+    top: -20%;
+    left: 0;
+}
+
+.flex, .date, .time {
+    width: fit-content;
+}
+
+.date>span {
+    position: relative;
+    display: block;
+}
+
+.date span:nth-child(2n+1) {
+    width: 65px;
+    height: 2px;
+    top: 18px;
+    left: -70px;
+    background: var(--purple);
+    box-shadow: 1px 1px 3px var(--purple);
+    border-radius: 3.7vw;
+}
+
+.date span:nth-child(2n+2) {
+    width: 30px;
+    height: 1px;
+    top: 24px;
+    left: -90px;
+    background: var(--pink);
+    box-shadow: 1px 1px 3px var(--pink);
+    border-radius: 3.7vw;
+}
+
+.time span:nth-child(2n+1) {
+    width: 65px;
+    height: 2px;
+    top: 18px;
+    left: -70px;
+    background: #FA0;
+    box-shadow: 1px 1px 3px #FA0;
+    border-radius: 3.7vw;
+}
+
+.time span:nth-child(2n+2) {
+    width: 30px;
+    height: 1px;
+    top: 24px;
+    left: -90px;
+    background: var(--orange);
+    box-shadow: 1px 1px 3px var(--orange);
+    border-radius: 3.7vw;
+}
+
+
+#individual-details {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    background-color: var(--gray);
+    border-radius: .5vw;
+    margin-top: 3.7vw;
+    padding: 3vw 3.7vw;
+    width: 100%;
+    min-height: 80vh;
+}
+
+#individual-details div {
+    padding-bottom: 3.7vw;
+}
+
+#individual-details p {
+    font-size: 1.2vw;
+    padding: .7vw 0;
+}
+
+#individual-details span::before, #individual-details span::after {
+    content: '';
+    position: absolute;
+    transform: rotate(135deg);
+    display: block;
+}
+
+#individual-details span::before {
+    width: 37px;
+    height: 3px;
+    top: 5px;
+    left: -40px;
+    background:var(--cyan);
+    box-shadow: 1px 1px 3px var(--cyan);
+    border-radius: 3.7vw;
+}
+
+#individual-details span::after {
+    width: 22px;
+    height: 3px;
+    top: 4px;
+    left: -20px;
+    background: #80FDDA;
+    box-shadow: 1px 1px 3px #80FFDA;
+    border-radius: 3.7vw;
 }
 
 /*Information Main*/
