@@ -772,15 +772,15 @@ a:visited {
     display: none;
 }
 
-#open p {
+.open p {
     display: block;
 }
 
-#open .stages-info>h6, #open .stages-info>br {
+.open .stages-info>h6, .open .stages-info>br {
     display: block;
 }
 
-#open .fas.fa-angle-down {
+.open .fas.fa-angle-down {
     transform: rotate(180deg);
 }
 
