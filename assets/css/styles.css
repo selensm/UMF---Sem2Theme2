@@ -753,6 +753,62 @@ a:visited {
 
 /*Information Main*/
 
+.info section, .info h1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.info section {
+    margin: 3.7vw 0;
+    padding: 1.7vw;
+}
+
+.info h5 {
+    min-width: 50%;
+}
+
+.info .fas.fa-angle-down {
+    color: #fff;
+    max-width: 5%;
+    position: relative;
+    left: 45%;
+    top: 0;
+}
+
+.info hr {
+    margin: 1vw 0;
+}
+
+.flex-info {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.info p {
+    display: none;
+    padding-top: 3.7vw;
+}
+
+.stages-info>h6, .stages-info>br {
+    display: none;
+}
+
+.open p {
+    display: block;
+}
+
+.open .stages-info>h6, .open .stages-info>br {
+    display: block;
+}
+
+.open .fas.fa-angle-down {
+    transform: rotate(180deg);
+}
+
+.stages-info>p {
+    padding: 1.7vw 0;
+}
 
 /*Footer*/
 
