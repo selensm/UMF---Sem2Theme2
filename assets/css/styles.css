@@ -753,14 +753,21 @@ a:visited {
 
 /*Information Main*/
 
-.info section, .info h1 {
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .info section, .info h1 {
     grid-column-start: 2;
     grid-column-end: 3;
-}
+} */
 
 .info section {
     margin: 3.7vw 0;
     padding: 1.7vw;
+    margin: 0 auto;
+    width: 50vw;
 }
 
 .info h5 {
@@ -851,6 +858,10 @@ footer a span {
 /*1024-721*/
 
 @media (max-width: 1024px) and (min-width: 721px) {
+    main {
+        min-height: 85vh
+    }
+
     h1 {
         font-size: 2.4vw;
     }
@@ -881,15 +892,15 @@ footer a span {
         font-size: 1.3vw;
     }
 
-    input#search {
-        height: 4.5vh;
-        padding: .7vw;
-    }
-
     /*Artists Page Main*/
 
     form select {
         font-size: 1.3vw;
+    }
+    
+    input#search {
+        height: 4.3vh;
+        padding: .7vw;
     }
 
     /*This adopts the structure of the 3-column grid*/
@@ -942,12 +953,149 @@ footer a span {
         height: .6vw;
     }
 
+    /*Info Page*/
+
+    .info section {
+        width: 60vw;
+    }
+
 }
 
 /*720-421*/
 
-@media (max-width: 720px) and (min-width: 421px) {}
+@media (max-width: 720px) and (min-width: 421px) {
+    #navLogo {
+        width: 18vw;
+    }
+
+    main {
+        padding-top: 9.7vw;
+        min-height: 70vh;
+    }
+
+    h1, h2 {
+        font-size: 3vw;
+    }
+
+    h3, h4 {
+        font-size: 1.8vw;
+    }
+
+    h5,
+    h6 {
+        font-size: 1.6vw;
+    }
+
+    p {
+        font-size: 1.5vw;
+        line-height: 2.4vw;
+    }
+
+    span {
+        font-size: 1.6vw;
+    }
+
+    nav ul li a {
+        font-size: 1.6vw;
+    }  
+
+    /*Artists Page Main*/
+
+    form select {
+        font-size: 1.6vw;
+    }
+    
+    input#search {
+        height: 3vh;
+        width: 28vw;
+        font-size: 1.8vw;
+    }
+
+    /*This adopts the structure of a 3-column grid*/
+    .grid-artists-large {
+        display: grid;
+        grid-template-columns: 6.25% 27.5% 2.5% 27.5% 2.5% 27.5% 6.25%;
+        grid-template-rows: auto;
+    }
+
+    .artists section article {
+        width: 27vw;
+    }
+
+    .artists section article:nth-child(3n+1) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .artists section article:nth-child(3n+2) {
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+
+    .artists section article:nth-child(3n+3) {
+        grid-column-start: 6;
+        grid-column-end: 7;
+    }
+    .artist-image {
+        width: 13vw;
+        height: 13vw;
+    }
+
+    .gradient {
+        width: 13.5vw;
+        height: 13.5vw;
+    }
+
+    /*Line Up Main*/
+
+    .align {
+        padding: 0;
+    }
+
+    label {
+        font-size: 1.6vw;
+    }
+
+    #dayOneCustom {
+        left: 31%;
+    }
+
+    #dayTwoCustom {
+        left: 47%;
+    }
+
+    .banner {
+        padding: .7vw;
+    }
+
+    .custom-radio {
+        height: 2vw;
+        width: 2vw;
+        border: solid 2px var(--cyan);
+        box-shadow: 1px 1px .5px var(--cyan);
+    }
+
+    .selected::after {
+        width: .9vw;
+        height: .9vw;
+    }
+
+    .line section article {
+        padding: 1vw;
+    }
+
+    /*Info Page*/
+
+    .info section {
+        width: 65vw;
+    }
+
+    /*Footer*/
+    #footerLogo {
+        width: 25vw;
+    }
+}
 
 /*420 min*/
 
-@media (min-width: 420px) {}
+@media (max-width: 420px) {}
