@@ -49,8 +49,6 @@ function renderHomeData(homeData) {
     }
 }
 
-getInformationPostFromWP();
-
 function getInformationPostFromWP() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
