@@ -256,3 +256,4 @@ function getMonthString(dateMonth){
     case"12": return "dec";
     }
 }
+
