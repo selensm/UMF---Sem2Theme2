@@ -416,6 +416,7 @@ a {
         padding: .7vw;
         margin-bottom: 3.7vw;
         height: fit-content;
+        min-height: 50vh;
     }
 
     hr {
@@ -1125,7 +1126,7 @@ a {
     nav {
         position: fixed;
         height: fit-content;
-        z-index: 1;
+        z-index: 100;
     }
 
     #menu {
@@ -1177,12 +1178,12 @@ a {
     }
 
     h4 {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     h5,
     h6 {
-        font-size: 1.6vw;
+        font-size: 3.2vw;
     }
 
     p {
@@ -1271,6 +1272,19 @@ a {
         left: 46%;
     }
 
+    .line-up .grid-three-column {
+        margin: 0 6.25%;
+    }
+
+    .line-up section article {
+        padding: 1.7vw;
+        min-height: 30vh;
+    }
+
+    .flexbox {
+        padding: 3.7vw 1.7vw;
+    }
+
     /*Arists*/
 
     .mobile-filters {
@@ -1357,7 +1371,7 @@ a {
     }
 
     .individual section article #individual {
-        background-color: var(--background);
+        background-color: transparent;
         width: fit-content;
         margin: 0 auto;
     }
@@ -1421,7 +1435,7 @@ a {
     }
 
     #individual-details {
-        background: var(--background);
+        background: transparent;
         padding: 3vw 8vw;
     }
 
@@ -1442,6 +1456,18 @@ a {
     }
 
     /*Info*/
+
+    .info section {
+        width: 85%;
+    }
+
+    .info .fas.fa-angle-down {
+        font-size: 3.5vw;
+    }
+
+    .info section article .flex-info {
+        padding: 1.7vw;
+    }
 
     /*Footer*/
 
