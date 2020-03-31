@@ -30,12 +30,17 @@ a {
     margin: 0 auto;
 }
 
-#dateSelector input{
+#dateSelector input {
     display: none;
 }
 
+.home-post,
+.info>section {
+    background: var(--background);
+}
+
 /*Background*/
-/* 
+
 .bckg {
     position: fixed;
     z-index: -1;
@@ -86,11 +91,6 @@ a {
     100% {
         width: 200%;
     }
-} */
-
-.home-post,
-.info>section {
-    background: var(--background);
 }
 
 @media (max-width: 1920px) {
@@ -1172,10 +1172,10 @@ a {
     }
 
     h3 {
-        font-size: 4vw;
+        font-size: 6vw;
         padding-top: 12vw;
     }
-    
+
     h4 {
         font-size: 3vw;
     }
@@ -1191,7 +1191,7 @@ a {
     }
 
     span {
-        font-size: 2.8vw;
+        font-size: 3vw;
     }
 
     .mobile-filters,
@@ -1238,6 +1238,39 @@ a {
 
     /*Line Up*/
 
+    .banner {
+        border-radius: 0;
+        height: 8vw;
+    }
+
+    label {
+        font-size: 2.3vw;
+        padding-right: 6vw;
+    }
+
+    .custom-radio {
+        top: 36%;
+        height: 3vw;
+        width: 3vw;
+        border: solid 2px var(--cyan);
+        box-shadow: 0px 0px 1px var(--cyan);
+    }
+
+    .selected::after {
+        top: 23%;
+        left: 25%;
+        width: 1.2vw;
+        height: 1.2vw;
+    }
+
+    #dayOneCustom {
+        left: 24%;
+    }
+
+    #dayTwoCustom {
+        left: 46%;
+    }
+
     /*Arists*/
 
     .mobile-filters {
@@ -1270,6 +1303,8 @@ a {
         height: fit-content;
         flex-direction: column-reverse;
         padding: 3.7vw 2.7vw;
+        position: relative;
+        top: -1vw;
     }
 
     input#search {
@@ -1277,7 +1312,7 @@ a {
         height: 8vw;
         transform: translate(0%, 0%);
         align-self: center;
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     form select {
@@ -1298,6 +1333,10 @@ a {
 
     /*Artists Cards*/
 
+    .artists {
+        margin: 0 6.25%;
+    }
+
     .artists section article {
         width: 100%;
         padding: 3.7vw;
@@ -1313,7 +1352,7 @@ a {
         margin: 0;
         width: 100%;
         height: fit-content;
-        font-size: 2.5vw;
+        font-size: 3vw;
         justify-content: center;
     }
 
@@ -1341,7 +1380,7 @@ a {
     }
 
     #performance>p {
-        font-size: 3vw;
+        font-size: 5vw;
         padding-top: 5.7vw;
     }
 
