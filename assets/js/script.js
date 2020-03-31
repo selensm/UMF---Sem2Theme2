@@ -1,5 +1,8 @@
 //General information
 
+var performances;
+var stagesLineUp;
+
 const apiUrl = 'http://nikrus.dreamhosters.com/wp-json/wp/v2/';
 const apiKey = 'P7yvPmPx0MVgfurtqB7Caxa2DTgJnbZM';
 const homePostId = 23;
@@ -7,8 +10,6 @@ const informationPostId = 24;
 const performanceId = 22;
 const tagArtistId = 21;
 const tagStagesId = 15;
-
-
 
 //Home page request
 function getHomePostFromWP() {
@@ -140,7 +141,7 @@ function getArtistPostFromWP() {
             renderArtistData(artistData);
         }
     }
-    xhttp.open('GET', `${apiUrl}posts?tags=${tagArtistId}`, true);
+    xhttp.open('GET', `${apiUrl}posts?tags=${tagArtistId}&per_page=100`, true);
     xhttp.setRequestHeader('Authorization', `Bearer ${apiKey}`);
     xhttp.send();
 }
@@ -162,13 +163,13 @@ function renderArtistData(artistData) {
     }
 }
 //redirect to Individual artist page
-function redirectIndividual(artistId){
+function redirectIndividual(artistId) {
     window.location.href = `individual.html?artistId=${artistId}`;
 }
 //request for individual artist information
-function renderIndividual(){
+function renderIndividual() {
     var artistId = window.location.search.split('=')[1]
-    
+
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -183,9 +184,9 @@ function renderIndividual(){
 
 }
 //render the individual artist information
-function renderIndividualArtistData(artistData){
-let artistAcf = artistData.acf;
-document.querySelector('main').innerHTML = `
+function renderIndividualArtistData(artistData) {
+    let artistAcf = artistData.acf;
+    document.querySelector('main').innerHTML = `
 <h1>GET TO KNOW OUR PERFORMANTS</h1>
         <div class="breadcrumbs">
             <a href="artists.html">Artists</a>
@@ -240,20 +241,131 @@ document.querySelector('main').innerHTML = `
 `
 }
 
-function getMonthString(dateMonth){
-    switch (dateMonth){
-    case"01": return "jan";
-    case"02": return "feb";
-    case"03": return "mar";
-    case"04": return "apr";
-    case"05": return "may";
-    case"06": return "jun";
-    case"07": return "jul";
-    case"08": return "aug";
-    case"09": return "sep";
-    case"10": return "oct";
-    case"11": return "nov";
-    case"12": return "dec";
+function getMonthString(dateMonth) {
+    switch (dateMonth) {
+        case "01": return "jan";
+        case "02": return "feb";
+        case "03": return "mar";
+        case "04": return "apr";
+        case "05": return "may";
+        case "06": return "jun";
+        case "07": return "jul";
+        case "08": return "aug";
+        case "09": return "sep";
+        case "10": return "oct";
+        case "11": return "nov";
+        case "12": return "dec";
     }
 }
 
+//request stages for line up
+function getStagesForLineUpFromWP() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            stagesLineUp = JSON.parse(this.responseText).reverse();
+            console.log(stagesLineUp);
+            renderStagesLineUp();
+        }
+    }
+    xhttp.open('GET', `${apiUrl}posts?tags=${tagStagesId}`, true);
+    xhttp.setRequestHeader('Authorization', `Bearer ${apiKey}`);
+    xhttp.send();
+}
+//render stages for line up
+function renderStagesLineUp() {
+    let stagesLineUpOutPut = document.querySelector('#stagesLineUp');
+    for (i = 0; i < stagesLineUp.length; i++) {
+        stagesLineUpOutPut.innerHTML += `
+        <article data-stagename="${stagesLineUp[i].acf.name}">
+        <h4>${stagesLineUp[i].acf.name}</h4>
+        <hr>
+
+        </article>
+    `}
+    getLineUpArtist();
+}
+//request artists for line up
+function getLineUpArtist() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            performances = JSON.parse(this.responseText).reverse();
+            console.log(performances);
+            renderPerformances("2020-01-17");
+        }
+    }
+    xhttp.open('GET', `${apiUrl}posts?categories=${performanceId}&per_page=100`, true);
+    xhttp.setRequestHeader('Authorization', `Bearer ${apiKey}`);
+    xhttp.send();
+}
+//render artists for line up
+function renderPerformances(date) {
+    let stageElements = document.querySelectorAll('article');
+    for (i = 0; i < performances.length; i++) {
+        if (date === performances[i].acf.date) {
+            for (j = 0; j < stageElements.length; j++) {
+                if (stageElements[j].getAttribute('data-stagename') === performances[i].acf.stage.post_title) {
+                    stageElements[j].innerHTML += `
+                <div class="flexbox">
+                    <h5>${performances[i].acf.time.substring(0, 5)}</h5>
+                    <h6>${performances[i].acf.artist.post_title}</h6>
+                </div>
+            `
+                    break;
+                }
+            }
+        }
+    }
+}
+
+let dateSelectorElm = document.querySelector('#dateSelector');
+if(dateSelectorElm){
+ let options = dateSelectorElm.querySelectorAll('input');
+
+for (i = 0; i < options.length; i++) {
+    options[i].addEventListener('change', function () {
+        if (options[0].nextElementSibling.className.indexOf('selected') !== -1) {
+            options[0].nextElementSibling.classList.remove('selected');
+            options[1].nextElementSibling.classList.add('selected');
+        } else {
+            options[1].nextElementSibling.classList.remove('selected');
+            options[0].nextElementSibling.classList.add('selected');
+        }
+        clearPerformances();
+        renderPerformances(this.value)
+    });
+}   
+}
+
+function clearPerformances(){
+    document.querySelectorAll('article').forEach(article =>{
+        article.querySelectorAll('div').forEach(div => {
+            div.remove();
+        })
+    })
+    
+}
+
+let Close = document.getElementById('close')
+let Nav = document.getElementById('mobileNav')
+
+document.getElementById('menu').addEventListener('click', function(){
+    Nav.classList.remove('hide');
+});
+
+document.getElementById('close').addEventListener('click', function(){
+    Nav.classList.add('hide');
+});
+
+let MobileFilters = document.getElementById('filters')
+ 
+document.getElementById('mobileFilters').addEventListener('click', function(){
+    MobileFilters.classList.toggle('hide');
+});
+
+let ArrowRotate = document.getElementById('orangeArrow')
+
+document.getElementById('mobileFilters').addEventListener('click', function(){
+    ArrowRotate.classList.toggle('rotated');
+});
