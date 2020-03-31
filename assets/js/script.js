@@ -359,13 +359,16 @@ document.getElementById('close').addEventListener('click', function(){
 });
 
 let MobileFilters = document.getElementById('filters')
- 
+if(MobileFilters){
 document.getElementById('mobileFilters').addEventListener('click', function(){
     MobileFilters.classList.toggle('hide');
-});
-
+});  
 let ArrowRotate = document.getElementById('orangeArrow')
 
 document.getElementById('mobileFilters').addEventListener('click', function(){
     ArrowRotate.classList.toggle('rotated');
-});
+}); 
+} 
+
+
+
