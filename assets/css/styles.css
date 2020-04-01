@@ -251,29 +251,21 @@ section:nth-last-child(3n+1) article::after {
 
     article:nth-child(4n+2) hr {
         background-color: var(--orange);
-        height: .2vw;
-        border: none;
         box-shadow: 1px 1px 24px var(--orange);
     }
 
     article:nth-child(4n+1) hr {
         background-color: var(--pink);
-        height: .2vw;
-        border: none;
         box-shadow: 1px 1px 24px var(--pink);
    }
 
     article:nth-child(4n) hr {
-        border:none;
         background-color: var(--cyan);
-        height: .2vw;
         box-shadow: 1px 1px 24px var(--cyan);
    }
 
     article:nth-child(4n+3) hr {
         background-color: var(--purple);
-        height: .2vw;
-        border: none;
         box-shadow: 1px 1px 24px var(--purple);
     }
 
@@ -682,7 +674,7 @@ section:nth-last-child(3n+1) article::after {
     }
 
     #individual .artist-image {
-        transform: translateY(1vw);
+        transform: translateY(.3vw);
     }
 
     #performance {
@@ -1256,6 +1248,7 @@ section:nth-last-child(3n+1) article::after {
         font-size: 3vw;
     }
 
+  
     .mobile-filters,
     .artists section article,
     .line-up section article {
@@ -1426,7 +1419,7 @@ section:nth-last-child(3n+1) article::after {
     .filters .fas.fa-angle-down {
         font-size: 5.6vw;
         top: 4.5vw;
-        left: 20vw;
+        left: 25vw;
         margin-right: 0vw;
     }
 
@@ -1480,7 +1473,7 @@ section:nth-last-child(3n+1) article::after {
     }
 
     #performance>p {
-        font-size: 4.5vw;
+        font-size: 5vw;
         padding-top: 5.7vw;
     }
 
@@ -1499,13 +1492,13 @@ section:nth-last-child(3n+1) article::after {
     }
 
     #performance>.flex>div>p:nth-child(1) {
-        font-size: 10vw;
+        font-size: 11vw;
     }
 
     #performance>.flex>div>p:nth-child(2) {
-        top: -30%;
+        top: -33%;
         left: 50%;
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     #performance>.flex>.date>span:nth-child(2n+1),
@@ -1520,6 +1513,10 @@ section:nth-last-child(3n+1) article::after {
         left: -15px;
     }
 
+    #individual .artist-image {
+        transform: translateY(1vw);
+    }
+
     #individual-details {
         background: transparent;
         padding: 3vw 8vw;
@@ -1532,13 +1529,13 @@ section:nth-last-child(3n+1) article::after {
     #individual-details span::before {
         width: 8px;
         height: 1px;
-        left: -19px;
+        left: -12px;
     }
 
     #individual-details span::after {
         width: 11px;
         height: 1px;
-        left: -12px;
+        left: -17px;
     }
 
     /*Info*/
