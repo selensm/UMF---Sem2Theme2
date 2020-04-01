@@ -88,6 +88,10 @@ a {
     }
 }
 
+
+@media (max-width: 1920px) {
+
+    
 .home-post {
     position: relative;
     margin-bottom: 8.7vw;
@@ -131,8 +135,6 @@ section:nth-child(2n+1) article::after {
 section:nth-last-child(3n+1) article::after {
     display: none;
 }
-
-@media (max-width: 1920px) {
 
     #menu,
     #close,
@@ -248,22 +250,30 @@ section:nth-last-child(3n+1) article::after {
     }
 
     article:nth-child(4n+2) hr {
-        border: 1px solid var(--orange);
+        background-color: var(--orange);
+        height: .2vw;
+        border: none;
         box-shadow: 1px 1px 24px var(--orange);
     }
 
     article:nth-child(4n+1) hr {
-        border: 1px solid var(--pink);
+        background-color: var(--pink);
+        height: .2vw;
+        border: none;
         box-shadow: 1px 1px 24px var(--pink);
    }
 
     article:nth-child(4n) hr {
-        border: 1px solid var(--cyan);
+        border:none;
+        background-color: var(--cyan);
+        height: .2vw;
         box-shadow: 1px 1px 24px var(--cyan);
    }
 
     article:nth-child(4n+3) hr {
-        border: 1px solid var(--purple);
+        background-color: var(--purple);
+        height: .2vw;
+        border: none;
         box-shadow: 1px 1px 24px var(--purple);
     }
 
@@ -459,10 +469,12 @@ section:nth-last-child(3n+1) article::after {
     }
 
     hr {
-        border: 1px solid var(--pink);
+        background-color: var(--pink);
+        border: none;
         border-radius: .5vw;
+        height: .2vw;
         box-shadow: 1px 1px 24px var(--pink);
-       margin: 0 1vw;
+        margin: 0 1vw;
     }
 
     .flexbox {
@@ -670,7 +682,7 @@ section:nth-last-child(3n+1) article::after {
     }
 
     #individual .artist-image {
-        transform: translateY(.3vw);
+        transform: translateY(1vw);
     }
 
     #performance {
@@ -1273,6 +1285,10 @@ section:nth-last-child(3n+1) article::after {
 
     /*Home*/
 
+    .home-post::after {
+    top: 108%;
+    }
+
     .home>section>.home-post {
         display: flex;
         flex-direction: column;
@@ -1446,11 +1462,12 @@ section:nth-last-child(3n+1) article::after {
     }
 
     .artist-image {
-        width: 16vw;
-        height: 16vw;
+        width: 31vw;
+        height: 31vw;
+        transform: translateY(-2.5vw);
     }
 
-    .radient {
+    .gradient {
         width: 33vw;
         height: 33vw;
     }
@@ -1463,7 +1480,7 @@ section:nth-last-child(3n+1) article::after {
     }
 
     #performance>p {
-        font-size: 5vw;
+        font-size: 4.5vw;
         padding-top: 5.7vw;
     }
 
@@ -1482,7 +1499,7 @@ section:nth-last-child(3n+1) article::after {
     }
 
     #performance>.flex>div>p:nth-child(1) {
-        font-size: 7vw;
+        font-size: 10vw;
     }
 
     #performance>.flex>div>p:nth-child(2) {
@@ -1513,9 +1530,9 @@ section:nth-last-child(3n+1) article::after {
     }
 
     #individual-details span::before {
-        width: 12px;
+        width: 8px;
         height: 1px;
-        left: -21px;
+        left: -19px;
     }
 
     #individual-details span::after {
