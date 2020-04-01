@@ -248,22 +248,22 @@ section:nth-child(2n+1) article::before {
 
     article:nth-child(4n+2) hr {
         border: 1px solid var(--orange);
-        box-shadow: 1px 1px 12px var(--orange);
+        box-shadow: 1px 1px 24px var(--orange);
     }
 
     article:nth-child(4n+1) hr {
         border: 1px solid var(--pink);
-        box-shadow: 1px 1px 12px var(--pink);
+        box-shadow: 1px 1px 24px var(--pink);
    }
 
     article:nth-child(4n) hr {
         border: 1px solid var(--cyan);
-        box-shadow: 1px 1px 12px var(--cyan);
+        box-shadow: 1px 1px 24px var(--cyan);
    }
 
     article:nth-child(4n+3) hr {
         border: 1px solid var(--purple);
-        box-shadow: 1px 1px 12px var(--purple);
+        box-shadow: 1px 1px 24px var(--purple);
     }
 
     /*Grids*/
@@ -395,6 +395,7 @@ section:nth-child(2n+1) article::before {
         font-size: 1.3vw;
         color: #fff;
         padding-right: 3vw;
+        cursor: pointer;
     }
 
     #dayOne,
@@ -413,7 +414,7 @@ section:nth-child(2n+1) article::before {
         width: 1.5vw;
         background-color: transparent;
         border: solid 3px var(--cyan);
-        box-shadow: 1px 1px 3px var(--cyan);
+        box-shadow: 1px 1px 50px var(--cyan);
         border-radius: 50%;
     }
 
@@ -459,7 +460,7 @@ section:nth-child(2n+1) article::before {
     hr {
         border: 1px solid var(--pink);
         border-radius: .5vw;
-        box-shadow: 1px 1px 12px var(--pink);
+        box-shadow: 1px 1px 24px var(--pink);
        margin: 0 1vw;
     }
 
@@ -594,7 +595,7 @@ section:nth-child(2n+1) article::before {
     .fas.fa-angle-down {
         font-size: 1.6vw;
         color: var(--cyan);
-        text-shadow: var(--cyan) 1px 1px 12px;
+        text-shadow: var(--cyan) 1px 1px 24px;
         position: relative;
         top: .5vw;
         margin-right: 3vw;
@@ -611,7 +612,7 @@ section:nth-child(2n+1) article::before {
         background: var(--gray);
         border: solid 1px var(--orange);
         border-radius: .5vw;
-        box-shadow: var(--orange) 1px 1px 12px;
+        box-shadow: var(--orange) 1px 1px 8px;
         width: 30vw;
         height: 3vw;
         padding: 1vw;
@@ -654,7 +655,7 @@ section:nth-child(2n+1) article::before {
 
     .individual h3 {
         color: var(--cyan);
-        text-shadow: 1px 1px 3px var(--cyan);
+        text-shadow: 1px 1px 50px rgba(0, 224, 168, 0.8);
     }
 
     .individual section article #individual,
