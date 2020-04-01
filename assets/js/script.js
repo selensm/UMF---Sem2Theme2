@@ -31,7 +31,7 @@ function renderHomeData(homeData) {
         let homeSection = document.createElement('section');
         homeSection.id = i;
         document.querySelector('.home').appendChild(homeSection);
-        if (homeData[i].acf.imagevideo.split('.')[2] === 'mp4') {
+        if (homeData[i].acf.imagevideo.split('.')[3] === 'mp4') {
             document.getElementById(homeSection.id).innerHTML = `
     
             <article class="home-post">
